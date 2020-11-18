@@ -1,15 +1,9 @@
 package com.example.tictactoev1;
 
-import android.content.Intent;
 import android.os.Bundle;
-<<<<<<< Updated upstream
-import androidx.appcompat.app.AppCompatActivity;
-import android.view.View;
-
-public class MainActivity extends AppCompatActivity {
-=======
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,19 +12,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button[][] buttons = new Button[3][3];
     private boolean playerOneTurn = true;
     private int roundCount;
->>>>>>> Stashed changes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< Updated upstream
-    }
-
-    public void onClickNextPage(View view)
-    {
-        startActivity(new Intent(MainActivity.this, MainActivity2.class));
-=======
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -120,6 +106,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         roundCount = 0;
         playerOneTurn = true;
->>>>>>> Stashed changes
     }
 }
