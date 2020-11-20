@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity2">
 
 
@@ -12,14 +13,17 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="50dp"
-        android:text="Tic Tac Toe" />
+        android:text="Tic Tac Toe"
+        android:fontFamily="@font/eagle_lake"
+        android:textColor="@color/black"
+        android:textSize="50dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onClickPage2"
+        android:backgroundTint="@color/black"
         android:text="Start" />
 
 </LinearLayout>
