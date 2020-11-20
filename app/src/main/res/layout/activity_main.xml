@@ -8,22 +8,15 @@
     android:visibility="visible"
     tools:context="MainActivity">
 
-<<<<<<< Updated upstream
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tic Tac Toe" />
 
-    <Button
-        android:id="@+id/nextPageBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClickNextPage"
-        android:text="Next page" />
-</LinearLayout>
-=======
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="133dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,7 +28,7 @@
             android:layout_width="0dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:background="@android:color/black"
             android:textSize="60sp"
@@ -46,7 +39,7 @@
             android:layout_width="0dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:background="@android:color/black"
             android:textSize="60sp" />
@@ -54,7 +47,7 @@
         <Button
             android:id="@+id/button_02"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:background="@android:color/black"
             android:insetLeft="8dp"
@@ -73,7 +66,7 @@
             android:layout_width="0dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:textSize="60sp" />
 
@@ -82,7 +75,7 @@
             android:layout_width="0dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:textSize="60sp" />
 
@@ -91,7 +84,7 @@
             android:layout_width="0dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:textSize="60sp" />
 
@@ -107,7 +100,7 @@
             android:layout_width="0dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:textSize="60sp" />
 
@@ -116,7 +109,7 @@
             android:layout_width="0dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:textSize="60sp" />
 
@@ -125,11 +118,15 @@
             android:layout_width="0dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
-            android:layout_height="match_parent"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:textSize="60sp" />
 
     </LinearLayout>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="147dp" />
+
 </LinearLayout>
->>>>>>> Stashed changes
+
