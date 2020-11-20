@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,11 +14,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button[][] buttons = new Button[3][3];
     private boolean playerOneTurn = true;
     private int roundCount;
+    private int xWins =0, yWins=0;
+    private TextView xScore, yScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        xScore = findViewById(R.id.xScore);
+        yScore = findViewById(R.id.yScore);
+        xScore.setText("0");
+        yScore.setText("0");
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -88,15 +95,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void playerOneWins() {
-        // takes to screen where it says player one wo
+        // takes to screen where it says player one won
+        Toast.makeText(MainActivity.this, ("X wins!"), Toast.LENGTH_SHORT).show();
+        xWins++;
+        xScore.setText(xWins +"");
         resetBoard();
     }
     private void playerTwoWins() {
         // takes to screen where it says player one won
+        Toast.makeText(MainActivity.this, ("O wins!"), Toast.LENGTH_SHORT).show();
+        yWins++;
+        yScore.setText(yWins + "");
         resetBoard();
     }
     private void draw() {
         // takes to screen where it says player one won
+        Toast.makeText(MainActivity.this, ("Tie"), Toast.LENGTH_SHORT).show();
         resetBoard();
     }
     private void resetBoard() {
@@ -109,8 +123,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         playerOneTurn = true;
     }
 
-    public void onClickNextPage(View view)
-    {
-        startActivity(new Intent(MainActivity.this, MainActivity2.class));
-    }
+//    public void nextPage()
+//    {
+//        Intent lastPage = new Intent(MainActivity.this, MainActivity2.class);
+//        lastPage.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//        startActivity(lastPage);
+//        finish();
+//    }
 }

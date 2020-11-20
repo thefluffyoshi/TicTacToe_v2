@@ -6,18 +6,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:visibility="visible"
-    tools:context="MainActivity">
+    tools:context="MainActivity"
+    android:background="@color/white">
 
     <TextView
-        android:id="@+id/TV"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tic Tac Toe" />
-
-    <Space
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="133dp" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="40dp">
 
+        <EditText
+            android:id="@+id/y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="O wins"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/yScore"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="0"
+            android:textColor="#FF0000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -26,11 +53,11 @@
         <Button
             android:id="@+id/button_00"
             android:layout_width="0dp"
-            android:insetLeft="8dp"
-            android:insetRight="8dp"
             android:layout_height="130dp"
             android:layout_weight="1"
-            android:background="@android:color/black"
+            android:background="@drawable/btnbackground"
+            android:insetLeft="8dp"
+            android:insetRight="8dp"
             android:textSize="60sp"
             app:iconPadding="84dp" />
 
@@ -124,9 +151,37 @@
 
     </LinearLayout>
 
-    <Space
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="147dp" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="40dp">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="X wins"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/xScore"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="0"
+            android:textColor="#FF0000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </LinearLayout>
 
