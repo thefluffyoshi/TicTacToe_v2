@@ -1,5 +1,6 @@
 package com.example.tictactoev1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -106,5 +107,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         roundCount = 0;
         playerOneTurn = true;
+    }
+
+    public void onClickNextPage(View view)
+    {
+        startActivity(new Intent(MainActivity.this, MainActivity2.class));
     }
 }
