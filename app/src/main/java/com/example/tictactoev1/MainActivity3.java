@@ -14,8 +14,8 @@ public class MainActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-//        TextView winner = (TextView) findViewById(R.id.winnerTV);
-//        winner.setText("X wins");
+        TextView winner = (TextView) findViewById(R.id.winnerTV);
+        winner.setText("X wins");
     }
 
     public void onClickPlayAgain(View view)
