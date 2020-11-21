@@ -69,7 +69,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void onClickWinner(View view)
     {
-        startActivity(new Intent(MainActivity.this, MainActivity3.class));
+        if (xWins > yWins)
+        {
+            startActivity(new Intent(MainActivity.this, MainActivity3.class));
+        }
+        else if (yWins > xWins)
+        {
+            startActivity(new Intent(MainActivity.this, MainActivity4.class));
+        }
     }
 
     private boolean checkForWin() {
@@ -144,6 +151,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         roundCount = 0;
         playerOneTurn = true;
     }
+
+
+
 
 //    public void onClickPlayAgainTest(View view)
 //    {
