@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:onClick="onClickPage2"
         android:backgroundTint="@color/black"
+        android:fontFamily="@font/eagle_lake"
         android:text="Start" />
 
 </LinearLayout>

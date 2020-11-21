@@ -16,13 +16,14 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/y"
+            android:id="@+id/oWins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             android:inputType="textPersonName"
             android:text="O wins"
+            android:fontFamily="@font/eagle_lake"
             android:textColor="#000000"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -153,6 +154,17 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/playAgainBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:visibility="invisible"
+        android:onClick="onClickWinner"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/eagle_lake"
+        android:text="Winner!" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -160,12 +172,13 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/xWins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             android:inputType="textPersonName"
+            android:fontFamily="@font/eagle_lake"
             android:text="X wins"
             android:textColor="#000000"
             android:textSize="30sp"

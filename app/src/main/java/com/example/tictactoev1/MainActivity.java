@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,8 +44,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (playerOneTurn) {
             ((Button) view).setText("X");
+            //didn't work
+//            EditText playerOne = findViewById(R.id.oWins);
+//            playerOne.setBackgroundColor(000000);
         } else {
             ((Button) view).setText("O");
+            //didn't work
+//            EditText playerTwo = findViewById(R.id.xWins);
+//            playerTwo.setBackgroundColor(000000);
         }
         roundCount++;
         if (checkForWin()) {
@@ -57,6 +64,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             draw();
         } else {
             playerOneTurn = !playerOneTurn;
+        }
+    }
+
+    public void onClickWinner(View view)
+    {
+        if (xWins > yWins)
+        {
+            startActivity(new Intent(MainActivity.this, MainActivity3.class));
+        }
+        else if (yWins > xWins)
+        {
+            startActivity(new Intent(MainActivity.this, MainActivity4.class));
         }
     }
 
@@ -100,6 +119,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         xWins++;
         xScore.setText(xWins +"");
         resetBoard();
+        if (xWins == 5)
+        {
+            Button winner = (Button) findViewById(R.id.playAgainBTN);
+            winner.setVisibility(View.VISIBLE);
+        }
     }
     private void playerTwoWins() {
         // takes to screen where it says player one won
@@ -107,6 +131,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         yWins++;
         yScore.setText(yWins + "");
         resetBoard();
+        if (yWins == 5)
+        {
+            Button winner = (Button) findViewById(R.id.playAgainBTN);
+            winner.setVisibility(View.VISIBLE);
+        }
     }
     private void draw() {
         // takes to screen where it says player one won
@@ -122,6 +151,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         roundCount = 0;
         playerOneTurn = true;
     }
+
+
+
+
+//    public void onClickPlayAgainTest(View view)
+//    {
+//        startActivity(new Intent(MainActivity.this, MainActivity3.class));
+//    }
 
 //    public void nextPage()
 //    {
