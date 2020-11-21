@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:visibility="visible"
-    tools:context="MainActivity">
+    tools:context=".MainActivity">
 
+<<<<<<< HEAD
 
     <TextView
         android:id="@+id/textView"
@@ -17,109 +16,26 @@
 
 
     <LinearLayout
+=======
+    <com.google.android.material.appbar.AppBarLayout
+>>>>>>> upstream/master
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.TicTacToeV1.AppBarOverlay">
 
-        <Button
-            android:id="@+id/button_00"
-            android:layout_width="0dp"
-            android:insetLeft="8dp"
-            android:insetRight="8dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/black"
-            android:textSize="60sp"
-            app:iconPadding="84dp" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.TicTacToeV1.PopupOverlay" />
 
-        <Button
-            android:id="@+id/button_01"
-            android:layout_width="0dp"
-            android:insetLeft="8dp"
-            android:insetRight="8dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/black"
-            android:textSize="60sp" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-        <Button
-            android:id="@+id/button_02"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/black"
-            android:insetLeft="8dp"
-            android:insetRight="8dp"
-            android:textSize="60sp" />
+    <include layout="@layout/content_main" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <Button
-            android:id="@+id/button_10"
-            android:layout_width="0dp"
-            android:insetLeft="8dp"
-            android:insetRight="8dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp" />
-
-        <Button
-            android:id="@+id/button_11"
-            android:layout_width="0dp"
-            android:insetLeft="8dp"
-            android:insetRight="8dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp" />
-
-        <Button
-            android:id="@+id/button_12"
-            android:layout_width="0dp"
-            android:insetLeft="8dp"
-            android:insetRight="8dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <Button
-            android:id="@+id/button_20"
-            android:layout_width="0dp"
-            android:insetLeft="8dp"
-            android:insetRight="8dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp" />
-
-        <Button
-            android:id="@+id/button_21"
-            android:layout_width="0dp"
-            android:insetLeft="8dp"
-            android:insetRight="8dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp" />
-
-        <Button
-            android:id="@+id/button_22"
-            android:layout_width="0dp"
-            android:insetLeft="8dp"
-            android:insetRight="8dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="60sp" />
-
-    </LinearLayout>
-
+<<<<<<< HEAD
 </LinearLayout>
+=======
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+>>>>>>> upstream/master
