@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import org.w3c.dom.Text;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +18,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int roundCount;
     private int xWins =0, yWins=0;
     private TextView xScore, yScore;
+
+    private TextView playerOneDisplay;
+    private TextView playerTwoDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 buttons[i][j].setOnClickListener(this);
             }
         }
+
+        Button buttonReset = findViewById(R.id.button_reset);
+        buttonReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetGame();
+            }
+        });
     }
 
     @Override
@@ -44,11 +56,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (playerOneTurn) {
             ((Button) view).setText("X");
+            ((Button) view).setTextColor(getResources().getColor(R.color.black));
+            //playerOneDisplay.setTextColor(getResources().getColor(R.color.black));
             //didn't work
 //            EditText playerOne = findViewById(R.id.oWins);
 //            playerOne.setBackgroundColor(000000);
         } else {
             ((Button) view).setText("O");
+            ((Button)view).setTextColor(getResources().getColor(R.color.white));
+            //playerTwoDisplay.setTextColor(getResources().getColor(R.color.white));
             //didn't work
 //            EditText playerTwo = findViewById(R.id.xWins);
 //            playerTwo.setBackgroundColor(000000);
@@ -119,11 +135,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         xWins++;
         xScore.setText(xWins +"");
         resetBoard();
-        if (xWins == 5)
-        {
-            Button winner = (Button) findViewById(R.id.playAgainBTN);
-            winner.setVisibility(View.VISIBLE);
-        }
     }
     private void playerTwoWins() {
         // takes to screen where it says player one won
@@ -131,11 +142,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         yWins++;
         yScore.setText(yWins + "");
         resetBoard();
-        if (yWins == 5)
-        {
-            Button winner = (Button) findViewById(R.id.playAgainBTN);
-            winner.setVisibility(View.VISIBLE);
-        }
     }
     private void draw() {
         // takes to screen where it says player one won
@@ -151,8 +157,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         roundCount = 0;
         playerOneTurn = true;
     }
-
-
+    private void resetGame() {
+        xWins = 0;
+        yWins = 0;
+        updatePlayerScore();
+        resetBoard();
+    }
+    public void updatePlayerScore()
+    {
+        xScore.setText(Integer.toString(xWins));
+        yScore.setText(Integer.toString(yWins));
+    }
 
 
 //    public void onClickPlayAgainTest(View view)
