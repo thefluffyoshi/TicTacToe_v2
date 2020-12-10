@@ -1,4 +1,5 @@
 # Project Name: TicTacToe_v1
+Class: Advanced Java with Android Studio
 
 People who worked on the project: thefluffyoshi, audy910, chewbacca615
 
