@@ -22,10 +22,47 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClickPage2"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/eagle_lake"
-        android:text="Start" />
+        android:onClick="onClickPage2"
+        android:text="VS Friends" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="AI Difficulty"
+        android:textSize="20sp" />
+
+    <SeekBar
+        android:id="@+id/diffseekbar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="2"
+        android:progress="1" />
+
+    <TextView
+        android:id="@+id/diffname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Medium"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/vsaibutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/eagle_lake"
+        android:onClick="onVsAI"
+        android:text="VS AI" />
 
 </LinearLayout>
 
